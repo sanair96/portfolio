@@ -1,0 +1,81 @@
+body,html{
+	min-height: 100vh;
+	margin: 0px;
+	padding: 0px;
+}
+
+.navigation{
+	position: fixed;
+	bottom: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	width: 100%;
+}
+.nav{
+	width: 100%;
+}
+.nava{
+	border-left-color: #90a4ae;
+	border-right-color: #90a4ae;
+	border-width: 1px;
+	border-left-style: solid;
+	border-right-style: solid;
+	background-color: #455a64;
+	text-decoration: none;
+	color: black;
+	display: flex;
+	justify-content: center;
+	vertical-align: middle;
+	padding: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.gradient{
+	height: 30vh;
+	width: 100%;
+background: linear-gradient(226deg, #32cca4, #426b94);
+background-size: 400% 400%;
+-webkit-animation: gradanime 30s ease infinite;
+-moz-animation: gradanime 30s ease infinite;
+-o-animation: gradanime 30s ease infinite;
+animation: gradanime 30s ease infinite;
+}
+
+.myimg{
+	position: absolute;
+	top: 13vh;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mainimg{
+	width: 200px;
+	border-radius: 100px;
+}
+@-webkit-keyframes gradanime {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradanime {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes gradanime {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradanime { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
