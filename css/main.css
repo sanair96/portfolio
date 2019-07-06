@@ -1,7 +1,15 @@
+html {
+	perspective: 30px;
+}
+
 body,html{
 	min-height: 100vh;
 	margin: 0px;
 	padding: 0px;
+}
+
+#root {
+	transition: all .2s;
 }
 
 .navigation{
@@ -35,7 +43,11 @@ body,html{
 
 .gradient{
 	height: 30vh;
+	min-height: 170px;
 	width: 100%;
+	-webkit-box-shadow: 0px 20px 90px -23px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 20px 90px -23px rgba(0,0,0,0.75);
+box-shadow: 0px 20px 90px -23px rgba(0,0,0,0.75);
 background: linear-gradient(226deg, #32cca4, #426b94);
 background-size: 400% 400%;
 -webkit-animation: gradanime 30s ease infinite;
@@ -44,20 +56,85 @@ background-size: 400% 400%;
 animation: gradanime 30s ease infinite;
 }
 
+.fadeIn{
+	animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
 .myimg{
-	position: absolute;
-	top: 13vh;
+	position: relative;
+	top: -100px;
 	width: 100%;
 	text-align: center;
-	overflow: hidden;
+	overflow: visible;
 	margin-left: auto;
 	margin-right: auto;
+	transition: all 0.5s;
 }
 
 .mainimg{
-	width: 200px;
+	-webkit-box-shadow: 0px 20px 44px -12px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 20px 44px -12px rgba(0,0,0,0.75);
+	box-shadow: 0px 20px 44px -12px rgba(0,0,0,0.75);
+	width: 17vw;
 	border-radius: 100px;
+	min-width: 150px;
+	max-width: 200px;
 }
+
+.hamburger {
+	padding: 20px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	
+}
+
+.hamburger div {
+	width: 15px;
+	border-radius: 10px;
+	margin-bottom: 5px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	transition: all .5s;
+}
+.hamburger div:nth-child(even) {
+	width: 25px;
+}
+
+.hamburger-open div:nth-child(even) {
+	transform: rotateZ(180deg);	
+}
+
+.hamburger-open div:nth-child(1) {
+	width: 15px;
+	transform: translateY(5px) translateX(-3px) rotate(-405deg);
+}
+.hamburger-open div:nth-child(3) {
+	width: 15px;
+	transform: translateY(-5px) translateX(-3px) rotate(405deg);
+}
+
+.move-back {
+	transform: translateZ(-3px);
+}
+
+@media screen and (max-width:500px) {
+	.myimg {
+		top:-75px;
+	}
+}
+
 @-webkit-keyframes gradanime {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
