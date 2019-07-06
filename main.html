@@ -6,14 +6,17 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<div id='sidebar' onclick="sideBarToggle(this)" class='hamburger'>
+	<div id="hamburger-icon" onclick="sideBarToggle()" class='hamburger'>
 		<div></div>
 		<div></div>
 		<div></div>
-		<div id='drawer'>
-			
-		</div>
 	</div>
+	<div id='sidebar'>
+		
+	</div>
+	<div id="overlay" onclick="sideBarToggle()">
+
+		</div>
 	<div id="root">
 		<div class="gradient"></div>
 		<div class="myimg">
@@ -25,14 +28,14 @@
 			</div>
 		<div>
 		</div>
-		<div class="navigation">
+		<!-- <div class="navigation">
 			<div class="nav"><a class="nava" href="#">Home</a>
 			</div>
 			<div class="nav"><a class="nava" href="#">Skills</a>
 			</div>
 			<div class="nav"><a class="nava" href="#">Contact</a>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </body>
 <script>
@@ -40,9 +43,10 @@
 		document.getElementById('mugshot').classList.add('fadeIn');
 	}
 
-	sideBarToggle = (e) => {
-		console.log(e)
-		e.classList.toggle('hamburger-open');
+	sideBarToggle = () => {
+		document.getElementById('hamburger-icon').classList.toggle('hamburger-open');
+		document.getElementById('overlay').classList.toggle('open');
+		document.getElementById('sidebar').classList.toggle('open');
 		document.getElementById('root').classList.toggle('move-back');
 	}
 </script>
